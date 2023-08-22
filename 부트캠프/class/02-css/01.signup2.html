@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <title>회원가입 페이지 그리기</title>
+    <style>
+         html, body{height: 100%; width: 100%;}
+        *{margin: 0; padding: 0;} 
+
+        .mainform{
+            width: 500px;
+            height: 730px;
+            border: 1px solid #AACDFF;
+            margin: 0 auto;
+            padding: 50px;
+            box-sizing: border-box;
+            box-shadow: 5px 5px 5px #0068FF;
+            
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        h1{
+            font-weight: bold;
+            color: #0068FF;
+        }
+ 
+
+        .inputHeader{
+            color: gray;
+        }
+
+         
+        .inputText{
+            border-top: 0px solid;
+            border-right: 0px solid; 
+            border-left: 0px solid; 
+            border-bottom: 1px solid #AACDFF;
+            width: 100%;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="mainform">
+        <div>
+            <h1>회원 가입을 위해<br> 정보를 입력해주세요</h1>
+        </div>
+        <div>
+            <p class="inputHeader">* 이메일</p>
+            <input class="inputText" type="text" placeholder="이메일을 입력해주세요"/>
+        </div>
+        
+        <div>
+            <p class="inputHeader">* 이름</p>
+            <input class="inputText" type="text" placeholder="이름을 입력해주세요"/>
+        </div>
+        
+        <div>
+            <p class="inputHeader">* 비밀번호</p>
+            <input class="inputText" type="password" placeholder="비밀번호를 입력해주세요"/>
+        </div>
+        
+        <div>
+            <p class="inputHeader">* 비밀번호 확인</p>
+            <input class="inputText" type="password" placeholder="비밀번호를 다시입력해주세요"/>
+        </div>
+
+        <div style="margin: 0 auto;">
+            <input type="radio" name="gender">여성
+            <input type="radio" name="gender">남성
+        </div>
+
+        <div style="display: flex;">
+            <input type="checkbox">
+            <p style="font-size: 12px;">&nbsp;이용약관 개인정보 수집 및 이용, 마케팅 활용 선택에 모두 동의합니다.</p> 
+        </div>
+
+        <hr/>
+        <input type="button" value="가입하기" style="margin: 0 auto; width: 300px; height: 50px; background-color: white; border: 1px solid blue; color: blue;"/>
+    </div>
+</body>
+</html>

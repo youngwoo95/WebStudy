@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <title>Document</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+
+        /* 태그 선택자 이용 */
+        div{
+            width: 80px;
+            height: 80px;
+            border: 2px solid red;
+            text-align: center;
+            line-height: 80px;
+        }
+        
+        .parentBox{
+            width: 500px;
+            height: 500px;
+            border: 2px solid blue;
+            display: flex;
+            flex-direction: column;
+            /* flex-start 가 기본값 */
+            justify-content: space-between;
+            align-items: center;
+            /*padding: 100px;*/
+        }
+
+        /* ID 선택자 이용 
+        #contentBox{
+            box-sizing: content-box;
+        }
+        */
+        /* ID 선택자 이용 
+        #borderBox{
+            box-sizing: border-box;
+        }
+        */
+    </style>
+</head>
+<body>
+    <!--
+    <div id="contentBox">박스 1</div>
+    <div>박스 2</div>
+    <div id="borderBox">박스 3</div>
+    -->
+
+    <div class="parentBox">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <title>회원가입</title>
+    <style>
+        /* CSS 선택자를 이용한 스타일 적용 */
+        .pw{
+            border: 2px solid blue;
+        }
+    </style>
+    <link href="02-signup.css" rel="stylesheet">
+
+</head>
+<body>
+    <h1>회원가입</h1>
+    <!-- 외부 style 적용 -->
+    <input class="email" type="text" placeholder="이메일을 입력해 주세요."/><br/><br/> <!-- placehoder : 안내문구 -->
+    <!-- inline style 적용 -->
+    <input style="border: 2px solid purple;" type="text" placeholder="이름을 입력해 주세요."/><br/><br/>
+    <!-- <style> 태그 적용 -->    
+    <input class="pw" type="password" placeholder="비밀번호를 입력해 주세요."/><br/><br/> <!-- 자동 마스킹 처리 -->
+    <input class="pw" type="password" placeholder="비밀번호를 다시 입력해 주세요."/><br/><br/> <!-- 자동 마스킹 처리 -->
+    
+    <select>
+        <!-- disable : 선택 막기 -->
+        <!-- selected : 기본선택으로 설정 -->
+        <option disabled="true" selected="true">지역을 선택하세요</option> 
+        <optgroup label="수도권"> <!-- 옵션 그룹으로 묶는다. -->
+            <option>서울</option>
+            <option>경기</option>
+            <option>인천</option>
+        </optgroup>
+        <optgroup label="광역시"> <!-- 옵션 그룹으로 묶는다. -->
+            <option>부산</option>
+            <option>대구</option>
+            <option>울산</option>
+        </optgroup>
+    </select>
+
+    <br/><br/>
+    
+    <!-- 둘중 하나만 선택되게 하기 위해 같은 name을 지정하여 하나의 그룹처럼 묶어준다. -->
+    <input type="radio" name="gender">여성 
+    <input type="radio" name="gender">남성
+
+    <br/><br/>
+    
+    <input type="checkbox"> 이용약관 개인정보 수집 및 이용동의
+    <hr>
+    <input type="button" value="가입하기" title="가입하기 버튼"/> <!-- title : tooltip -->
+</body>
+</html>

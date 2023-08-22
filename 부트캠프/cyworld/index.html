@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <title>홍길동님의 미니홈피 :: 사이좋은 사람들, 싸이월드</title>
+    <link href="styles/index.css" rel="stylesheet"/>
+    <script src="https://kit.fontawesome.com/e38a45711e.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="background">
+        <div class="outerbox">
+            <div class="wrapper">
+                <!-- 화면 왼쪽 메뉴 부분 -->
+                <div class="wrapper_left">
+                    <div class="wrapper_left_header">
+                        <!-- TODAY 0 | TOTAL 12345 -->
+                        
+                        <div class="today"> <!-- 정렬을 위한 용도 -->
+                            <span>TODAY</span>
+                            <span>0</span>
+                            <span> | TOTAL</span>
+                            <span>12345</span>
+                        </div>
+                    </div>
+
+                    <div class="wrapper_left_body">
+                        <div class="left_body_header">
+                            <div class="left_body_header_gray"></div>
+                            <div class="left_body_header_line"></div>
+                        </div>
+                        
+                        <div class="left_body_profile">
+                            <div class="profile_detail">
+                                <i class="fa-regular fa-face-grin"></i> 
+                                name
+                            </div>
+                            <div class="profile_detail">
+                                <i class="fa-regular fa-face-grin"></i> 
+                                phone
+                            </div>
+                            <div class="profile_detail">
+                                <i class="fa-regular fa-face-grin"></i>
+                                mail
+                            </div>
+                            <div class="profile_detail">
+                                <i class="fa-regular fa-face-grin"></i>
+                                instagram
+                            </div>
+                        </div>
+
+                        <div class="left_body_footer">
+                            <div class="wrapper_feel">
+                            <div class="feel_title">오늘의 기분</div>
+                                <select class="feel_select">
+                                    <option selected="true" hidden="true">오늘은???</option>
+                                    <optgroup label="GOOD">
+                                        <option>기쁨</option>
+                                        <option>행복</option>
+                                    </optgroup>
+                                    <optgroup label="SOSO">
+                                        <option>보통</option>
+                                    </optgroup>
+                                    <optgroup label="BAD">
+                                        <option>나쁨</option>
+                                        <option>슬픔</option>
+                                    </optgroup>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="wrapper_right">
+                    <div class="wrapper_right_header">
+                        <div class="right_header_title">
+                            사이좋은 사람들, 싸이월드
+                        </div>
+                        <div class="right_header_setting">
+                            사생활보호설정
+                        </div>
+                    </div>
+                    <div class="wrapper_right_body">
+                        <!-- iframe : 컴포넌트 화 -->
+                        <iframe src="./home.html"></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

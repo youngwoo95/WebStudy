@@ -1,0 +1,147 @@
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+
+.background {
+    width: 1024px;
+    height: 600px;
+    background-image: url("../images/background.png");
+    /* url(./) : 점하나 해당 폴더내
+       url(../) : 점 두개 해당폴더 바깥에*/
+    padding-left: 20px;
+    padding-top: 20px;
+}
+
+.outerbox {
+    width: 808px;
+    height: 544px;
+    background-image: url("../images/outerbox.png");
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: row;
+    padding-left: 32px;
+    padding-top: 32px;
+}
+
+.wrapper_left {
+    width: 208px;
+    height: 472px;
+    display: flex;
+    flex-direction: column;
+}
+
+.wrapper_left_header {
+    width: 100%;
+    height: 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.today {
+    font-size: 9px;
+}
+
+.wrapper_left_body {
+    width: 100%;
+    height: 100%;
+    border: 1px solid gray;
+    border-radius: 15px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    /*align-items: center;*/
+    align-items: left;
+    padding: 20px 30px;
+    flex-wrap: nowrap;
+}
+
+.left_body_header {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.left_body_header_gray {
+    width: 148px;
+    height: 133px;
+    background-color: gray;
+}
+
+.left_body_header_line {
+    border-top: 1px dotted black;
+    margin: 12px 0px;
+
+}
+
+.left_body_profile {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.left_body_footer {
+    width: 100%;
+}
+
+.wrapper_feel {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.feel_title {
+    color: gray;
+    font-size: 11px;
+    margin-bottom: 5px;
+}
+
+.wrapper_right {
+    width: 524px;
+    height: 472px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding-left: 5px;
+}
+
+.wrapper_right_header {
+    width: 510px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0px 14px;
+    align-items: flex-end;
+}
+
+.wrapper_right_body {
+    width: 510px;
+    height: 445px;
+    border: 1px solid gray;
+    border-radius: 15px;
+    background-color: white
+}
+
+.right_header_title,
+.right_header_setting {
+    color: #55B2E4;
+    font-size: 9px;
+}
+
+.right_header_title {
+    font-size: 16px;
+}
+
+iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
