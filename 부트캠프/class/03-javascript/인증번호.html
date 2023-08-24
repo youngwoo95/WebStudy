@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>인증번호</title>
+    <script>
+        /*
+        function btnClick(number){
+            document.getElementById("getnumber").innerHTML=number;
+            }
+        */
+        var btnClick = (number) =>{
+            document.getElementById("getnumber").innerHTML=number;
+            document.getElementById("getnumber").style.color = "red";
+        }
+    </script>
+</head>
+<body>
+    <p id="getnumber">00000</p>
+    
+    <input type="button" value="인증번호전송" onclick="btnClick(1234)"/>
+    
+    
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <title>HTML 링크</title>
+    <style>
+
+        a:link    { color: teal; }    
+        a:visited { color: maroon; text-decoration: none }
+        a:hover   { color: yellow; text-decoration: none }
+        a:active  { color: red; text-decoration: none }
+    
+    </style>
+</head>
+<body>
+    <a href="https://www.naver.com">
+        <h2>네이버 링크</h2>
+    </a>
+
+    <hr>
+    
+    <!-- -->
+    <h1>TARGET 속성</h1>
+    <hr>
+    <h2><a href="https://www.naver.com" target="_blank">blank</h2>
+    <h2><a href="https://www.naver.com" target="_self">self</h2>
+    <h2><a href="https://www.naver.com" target="_parent">parent</h2>
+    <h2><a href="https://www.naver.com" target="top">top</h2>
+
+
+</body>
+</html>
+
+<!--
+    HTML 링크(Link)
+        : 오늘날 웹 페이지에는 다른 페이지나 다른 사이트로 연결되는 수 많은 하이퍼링크(hyperlink)가 존재한다.
+          이러한 하이퍼 링크를 간단히 링크(link)라고도 부르며, HTML에서는 <a> 태그로 표현한다.
+
+
+    <a href="링크주소">HTML 링크</a>
+
+    target 속성
+        : <a> 태그의 target 속성은 링크로 연결된 문서를 어디에서 열지를 명시한다.
+            _blank : 링크로 연결된 문서를 새 창이나 새 탭에서 오픈.
+            _self : 링크로 연결된 문서를 현재 프레임(frame)에서 오픈. (기본설정)
+            _parent : 링크로 연결된 문서를 부모 프레임(frame)에서 오픈.
+            _top : 링크로 연결된 문서를 현재 창의 가장 상위 프레임(frame)에서 오픈.
+            프레임(frame) 이름 : 링크로 연결된 문서를 지정된 프레임(frame)에서 오픈.
+
+    링크의 상태(state)
+        : HTML 링크의 상태는 다음과 같이 네 가지로 구분할 수 있다.
+
+            link : 아직 한 번도 방문한 적이 없는 상태 (기본설정)
+            visited : 한 번이라도 방문한 적이 있는 상태
+            hover : 링크 위에 마우스를 올려놓은 상태
+            active : 링크를 마우스로 누르고 있는 상태
+-->
