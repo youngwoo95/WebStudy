@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>인증번호받기2</title>
+    
+    <script>
+        let isStarted = false;
+
+        let auth = () =>
+        {
+            // 타이머가 작동중이 아닐때
+            if(!isStarted){
+
+                isStarted = !isStarted;
+                document.getElementById("finish").disabled=false;
+
+                const token = String(Math.floor(Math.random() * 1000000)).padStart(6,"0");
+                document.getElementById("target").innerText=token;
+                document.getElementById("target").style.color="#"+token;
+
+
+                // 타이머 추가
+                let time = 5;
+
+                let timer
+
+                timer = setInterval(function(){
+                    if(time>=0){
+                        let min = Math.floor(time/60);
+                        let second = String(time%60).padStart(2,"0");
+                        
+                        document.getElementById("timer").innerHTML=min + ":" +second;
+                        
+                        time--;
+                    }else{
+                    // 타이머가 작동중일때
+                        document.getElementById("finish").disabled=true;
+                        isStarted=false;
+                        console.log("타이머작동중");
+                        clearInterval(timer); // setInterval 를 삭제시켜줌
+                    }
+                },1000);
+            }
+            else{
+                
+            }
+        }
+    </script>
+</head>
+<body>
+    <div id="target">000000</div>
+    <button onclick="auth()">인증번호 전송</button>
+    <div id="timer">3:00</div>
+    <button id="finish" >인증완료</button>
+    
+</body>
+</html>
+
