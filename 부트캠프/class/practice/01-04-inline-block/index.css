@@ -1,3 +1,21 @@
-.block-container {}
+.block-container {
+    border: 3px solid blue;
+}
 
-.inline-container {}
+.inline-container {
+    border: 3px solid red;
+}
+
+.block-container div {
+    /* block 요소를 강제로 inline 요소로 바꿀 수 있음. */
+    /* display: inline; */
+    border: 3px solid green;
+    width: 400px;
+}
+
+.inline-container span {
+    /* inline 요소를 강제로 block 요소로 바꿀 수 있음. */
+    /* display: block; */
+    border: 3px solid purple;
+    width: 400px;
+}
