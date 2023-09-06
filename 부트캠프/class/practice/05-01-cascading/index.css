@@ -1,0 +1,15 @@
+* {
+    background-color: red;
+}
+
+div {
+    background-color: blue;
+}
+
+.text-class {
+    background-color: green;
+}
+
+#text-id {
+    background-color: yellow;
+}
