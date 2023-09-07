@@ -1,6 +1,5 @@
 * {
     box-sizing: border-box;
-
 }
 
 html,
@@ -12,32 +11,14 @@ body {
 .itemWrap {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
-    align-items: flex-start;
-    flex-wrap: wrap;
+    background-color: blue;
 }
 
 .item {
-    width: calc(25% - 7px);
-    aspect-ratio: 6 / 5;
+    width: 400px;
+    height: 320px;
     position: relative;
     overflow: hidden;
-    border-radius: 10px;
-    margin-bottom: 10px;
-}
-
-.item::after {
-    content: "";
-    display: block;
-    background-color: rgba(0, 0, 0, 0.5);
-    width: 100%;
-    height: 100%;
-
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 2;
-    opacity: 0;
 }
 
 .imgBox {
@@ -50,7 +31,6 @@ body {
     width: 100%;
     height: 100%;
     object-fit: cover;
-
 }
 
 .textBox {
@@ -63,13 +43,13 @@ body {
     flex-direction: column;
     justify-content: flex-end;
     align-items: flex-end;
-    padding: 20px 15px;
-    z-index: 3;
+    padding: 10px;
 }
 
 .textBox p {
     color: white;
     margin: 5px 0 0;
+    z-index: 3;
 }
 
 .textBox_name {
@@ -82,31 +62,42 @@ body {
     font-size: 16px;
     font-weight: 400;
     opacity: 0;
-
 }
 
+.item:after {
+    content: "";
+    display: block;
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: all 1s ease-in-out;
+    z-index: 2;
+    opacity: 0;
+}
 
 .item:hover .imgBox img {
     transform: scale(1.1);
-    transition: all 0.4s ease-in-out;
     filter: blur(3px);
-
+    transition: all 1s ease-in-out;
 }
 
-.item:hover::after {
-    transition: all 0.4s ease-in-out;
-    opacity: 1;
-}
 
 .item:hover .textBox_name {
-    transition: all 0.4s ease-in-out;
-    transform: translateY(-20px);
     opacity: 1;
+    transition: all 1s ease-in-out;
 }
 
+
 .item:hover .textBox_price {
-    transition: all 0.4s ease-in-out;
-    transform: translateY(-20px);
     opacity: 1;
-    transition-delay: 0.15s;
+    transition: all 1s ease-in-out;
+}
+
+
+.item:hover::after {
+    opacity: 1;
+    transition: all 1s ease-in-out;
 }
