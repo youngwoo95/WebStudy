@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>배열의 활용</title>
+</head>
+<body>
+    <h1>배열의 활용</h1>
+	<hr>
+    <h4>희소 배열</h4>
+    <p>
+        희소 배열이란 배열에 속한 요소의 위치가 연속적이지 않은 배열을 의미한다.<br>
+        따라서 희소 배열의 경우 배열의 length 프로퍼티 값보다 배열 요소의 개수가 언제나 작다.
+    </p>
+    <script>
+        var arr = new Array(); // 빈 배열 객체를 생성함.
+        arr[99] = "JavaScript"; // 배열 arr의 100번째 위치에 문자열을 삽입합
+        // 100번째 요소를 삽십했기 때문에 배열의 길이는 100으로 늘어남
+        document.write(`배열의 길이는 [${arr.length}] 입니다.`);
+    </script>
+    <!---->
+    <hr>
+    <h4>다차원 배열</h4>
+	<p>
+        다차원 배열이란 배열 요소가 또 다른 배열인 배열을 의미한다.<br>
+        <br>
+        <p>- 지금까지 우리가 살펴본 배열은 1차원 배열이다.</p>
+        <p>- 2차원 배열이란 배열 요소가 1차원 배열인 배열을 의미한다.</p>
+        <p>- 3차원 배열이란 배열 요소가 2차원 배열인 배열을 의미한다.</p>
+        <br>
+        <p>2차원 배열을 이해하면 그 이상의 배열 또한 같은 방식으로 이해할 수 있다</p>
+    </p>
+    
+    <script>
+		var arr = new Array(3); // 3개 요소를 가지는 배열을 생성함
+        for(var row = 0; row <3; row++){
+            arr[row] = new Array(4);
+            for(var column = 0;column<4;column++){
+                arr[row][column] = `[${row},${column}]`;
+                document.write(`arr[${row}][${column}]`);
+            }
+            document.write("<br>")
+        }
+	</script>
+    <!---->
+	<hr>
+    <h4>연관 배열(associative array)</h4>
+    <p>
+        자바스크립트에서 배열의 인덱스에는 0을 포함한 양의 정수만을 사용할 수 있다.<br>
+        이렇게 숫자로 된 인덱스 대신에 문자열로 된 키(key)를 사용하는 배열을 연관 배열(associative array)이라고 한다.
+        <br><br/>
+        대부분의 프로그래밍 언어가 지원하는 연관 배열을 자바스크립트는 별도로 제공하지는 않는다.<br>
+        대신에 인덱스로 문자열을 사용하여 연관 배열처럼 사용할 수 있는 객체(object)를 만들 수 있다.
+        <br/><br/>
+        하지만 이렇게 생성된 배열은 자바스크립트 내부적으로 Array 객체에서 기본 객체로 재선언된다.
+    </p>
+    <script>
+        var arr = []; // 비어있는 배열을 생성함.
+        arr["하나"] = 1; // 숫자 인덱스 대신에 문자열을 인덱스로 배열 요소를 추가함.
+        arr["참"] = true;
+        arr["자바스크립트"] = "JavaScript";
+        document.write(arr["참"]+"<br>"); // 문자열을 인덱스로 배열 요소에 접근할 수 있음
+        document.write(arr.length+"<br>"); // 연관 배열은 Array 객체가 아니므로 length 프로퍼티의 값이 0임.
+        document.write(arr[0]); // undefined
+    </script>
+    <!---->
+    <hr>
+    <h4>문자열을 배열처럼 접근하기</h4>
+    <p>자바스크립트에서 문자열은 변하지 않는 값이므로, 읽기 전용 배열로서 다룰 수 있습니다.</p>
+    <br>
+    <p>
+        따라서 배열처럼 [] 연산자를 사용하여 문자열을 구성하는 각 문자에 바로 접근할 수 있다.<br>
+        또한, Array 객체가 제공하는 모든 범용 메소드도 사용할 수 있습니다.
+        문자열의 각 문자는 String 객체에서 제공하는 charAt() 메소드를 사용해도 접근할 수 있습니다.
+    </p>
+    <br>
+    <script>
+        var str = "안녕하세요!"; // 문자열 생성
+        document.write(str[2]+"<br>") //하 출력
+        document.write(str.charAt(2));
+    </script>
+    <!---->
+    <hr>
+    <h4>자바스크립트에서 배열 여부 확인</h4>
+    <p>
+        자바스크립트에서는 배열이라는 타입(type)을 별도로 제공하지 않습니다.<br>
+        자바스크립트 배열은 객체(object) 타입이 되며, typeof 연산자를 사용하면 'object'를 반환합니다.
+    </p>
+    <script>
+        var arr = [1, true, "JavaScript"]; // 배열생성
+        document.write(typeof(arr));
+    </script>
+</body>
+</html>
