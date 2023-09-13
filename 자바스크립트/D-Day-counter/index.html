@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>D-Day</title>
+    <script>
+        // const output = function(){
+        //     console.log("함수를 실행했습니다.")
+        // }
+        const test = 123;
+
+        const dateFormMaker = function(){
+            const inputYear = document.querySelector('#target-year-input').value;
+            const inputMonth = document.querySelector('#target-month-input').value
+            const inputDate = document.querySelector('#target-date-input').value;
+            // console.log(document.querySelector('#target-year-input').value);
+            // console.log(document.querySelector('#target-month-input').value);
+            // console.log(document.querySelector('#target-date-input').value);
+            
+            const dateFormat = `${inputYear}-${inputMonth}-${inputDate}`;
+
+
+            console.log(inputYear, inputMonth, inputDate);
+            
+            return dateFormat;
+        }
+
+        const counterMaker = function(){
+            var temp = dateFormMaker();
+            console.log(temp);
+
+            const nowDate = new Date();
+            console.log(nowDate);
+
+            const targetDate = new Date(temp).setHours(0,0,0,0); // setHours(0,0,0,0) - 자정을 기준으로함. 안줄시 UTC 09시 기준.
+            console.log(targetDate);
+            
+            const remaining = (targetDate - nowDate)/1000;
+
+            const remainingDate = Math.floor(remaining / 3600 / 24); // 일자
+            const remainingHours = Math.floor(remaining / 3600) % 24; // 시간
+            const remainingMin = Math.floor(remaining/60) % 60; // 분
+            const remainingSec = Math.floor(remaining) % 60; // 초
+            console.log(remainingDate, remainingHours, remainingMin, remainingSec);
+
+        }
+
+    </script>
+</head>
+<body>
+    <input id="target-year-input" class="target-input"/>
+    <input id="target-month-input" class="target-input"/>
+    <input id="target-date-input" class="target-input"/>
+
+    <button onclick="counterMaker()">버튼</button>
+</body>
+</html>
