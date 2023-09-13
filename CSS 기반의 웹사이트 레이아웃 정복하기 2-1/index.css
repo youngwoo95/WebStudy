@@ -1,0 +1,66 @@
+html,
+body {
+    font-family: 'malgun gothic';
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.header {
+    width: 800px;
+    background-color: #90FFFF;
+    text-align: center;
+    height: 150px;
+    line-height: 150px;
+}
+
+.nav {
+    width: 800px;
+    background-color: #00FFFF;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+}
+
+.sidebar {
+    background-color: red;
+    text-align: center;
+    height: 150px;
+    line-height: 150px;
+    float: left;
+    width: 30%
+}
+
+.content {
+    background-color: blue;
+    text-align: center;
+    height: 150px;
+    line-height: 150px;
+    float: right;
+    width: 70%;
+}
+
+.content_wrap {
+    width: 800px;
+    border: 10px solid black;
+    overflow: auto;
+}
+
+
+
+.clear {
+    clear: both;
+}
+
+
+
+.footer {
+    width: 800px;
+    background-color: gray;
+    text-align: center;
+    height: 150px;
+    line-height: 150px;
+}
