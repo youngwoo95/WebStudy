@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>변수</title>
+</head>
+<body>
+    <button>Press me</button>
+    <script>
+        const button = document.querySelector("button");
+
+        button.onclick = function(){
+            let name = prompt("What is your name?");
+            alert(name);
+        }
+
+        window.onload = function(){
+            console.log("변수의 종류");
+            
+            console.log("==== 숫자 ====");
+            var myAge = 17;
+            console.log(myAge);
+
+            console.log("==== 문자열 ====");
+            var dolphinGoodbye = "So long and thanks for all the fish";
+            console.log(dolphinGoodbye);
+
+            console.log("==== 불리언(Booleans) ====")
+            var iAmAlive = true;
+            console.log(iAmAlive);
+
+            console.log("==== 배열 ====");
+            var myNameArray = ["Chris","Bob","Jim"];
+            var myNumberArray = [10, 15, 40];
+
+            console.log(myNameArray[0]);
+            console.log(myNumberArray[2]);
+
+            console.log("==== 객체 ====");
+            var dog = {
+                name : "Spot",
+                bread: "Dalmatian"
+            };
+
+            console.log(dog.name);
+            console.log(dog["name"]);
+
+            console.log("==== 지정되지 않은 타입 ====");
+            
+        }
+
+    </script>
+</body>
+</html>

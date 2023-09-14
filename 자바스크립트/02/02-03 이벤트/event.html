@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>간단한예제</title>
+</head>
+<body>
+    <button>Change color</button>
+
+    <script>
+        /*
+        const btn = document.querySelector("button");
+
+        function random(number){
+            return Math.floor(Math.random() * (number + 1));
+        }
+
+        btn.onclick = function () {
+            const rndcol = `rgb(${random(255)},${(random(255))},${(random(255))})`;
+            document.body.style.backgroundColor = rndcol;
+        }
+        */
+       const btn = document.querySelector("button");
+       
+
+       function random(number){
+            return Math.floor(Math.random() * (number + 1));
+        }
+
+       function bgChange() {
+            const rndcol = `rgb(${random(255)},${(random(255))},${(random(255))})`;
+            document.body.style.backgroundColor = rndcol;
+       }
+
+       //btn.clcik = bgChange;
+       //window.onkeydown = bgChange;
+       //window.onkeyup = bgChange;
+       //btn.onmouseover = bgChange;
+
+       // 이벤트 핸들러를 추가하고 제거하기
+       // 추가
+       /* 최근 스타일 (이벤트 핸들러 추가)*/
+       //[1]
+       /*
+       btn.addEventListener("click", function(){
+        var rndCol = `rgb(${random(255)},${(random(255))},${(random(255))})`;
+        document.body.style.backgroundColor = rndCol;
+       });*/
+       //[2]
+       btn.addEventListener("click",bgChange);
+
+       /*최근 스타일 (이벤트 핸들러 삭제)*/
+       //[2] 해제
+       //btn.removeEventListener("click", bgChange);
+    </script>
+</body>
+</html>
+
+<!--
+    btn.onfocus : 버튼이 포커스되었을때 바뀜
+    btn.onblur : 버튼이 포커스가 해제되었을때 바뀜.
+    btn.ondblclick : 오직 버튼이 더블클릭 되었을때만 색상이 바뀜
+    window.onkeydown : 키보드에서 키가 눌렀을때
+    window.onkeyup : 키보드에서 키를 뗐을때
+    btn.onmouseover : 마우스 포인터가 버튼 위로 올라가있을때
+    btn.onmouseout : 마우스 포인터가 버튼에서 벗어났을 때
+-->

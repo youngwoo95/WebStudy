@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Apply JavaScript example</title>
+    <script>
+        // DOMContentLoaded --> 브라우저의 DOMContentLoaded 이벤트를 수신하는 이벤트 수신기
+        // HTML 본문 전체를 불러와 읽었다는 것을 나타냄.
+        document.addEventListener("DOMContentLoaded", () => {
+        function createParagraph() {
+            const para = document.createElement("p");
+            para.textContent = "You clicked the button!";
+            document.body.appendChild(para);
+        }
+
+        const buttons = document.querySelectorAll("button");
+
+        for (const button of buttons) {
+            button.addEventListener("click", createParagraph);
+        }
+        });
+    </script>
+  </head>
+  <body>
+    <button>Click me</button>
+    <button>Click me</button>
+  </body>
+</html>

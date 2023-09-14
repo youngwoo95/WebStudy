@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="./index.css" rel="stylesheet"/>
+    <script src="./index.js"></script>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="content">
+            <h1>Number guessing game</h1>
+            <p>
+                We have seleceted a random number between 1 and 100. See if you can guess it in 10
+                turns of fewer. We'll tell you if your guess was too high or too low.
+            </p>
+            <div class="subcontent">
+                <p>Enter a guess:</p>
+                <input type="number" id="guessfield"/>
+                <button onclick="btnOnclick()">submit guess</button>
+            </div>
+            
+            <div class="quiz">
+                <p><b>1. 1과 100 사이의 무작위 숫자를 생성하기.</b></p>
+                <p><b>2. 플레이어의 현재 턴을 기록하기. 1부터 시작</b></p>
+                <p><b>3. 플에이어가 정답을 추측할 수 있는 방법을 제공</b></p>
+                <p><b>4. 플레이어가 자신의 추측 기록을 확인할 수 있도록, 제출하는 수를 먼저 어딘가에 기록하기</b></p>
+                <p><b>5. 그 후, 제출한 수가 정답인지 확인</b></p>
+                <p><b>6. 만약 정답이라면...</b></p>
+                <ol style="list-style: lower-alpha">
+                    <li>축하 메시지 보여주기</li>
+                    <li>이후에 플레이어가 다른 숫자를 제출하면 게임이 망가질 수 있으므로 제출을 막기.</li>
+                    <li>게임을 다시 시작할 수 있는 컨트롤 보여주기.</li>
+                </ol>
+                <p><b>7. 만약 오답이고 아직 플레이어 턴이 남아있다면...</b></p>
+                <ol style="list-style: lower-alpha;">
+                    <li>오답임을 알려주고 제출한 숫자가 너무 높앗는지 아니면 너무 낮았는지 보여주기.</li>
+                    <li>다른 숫자의 제출을 허용하기.</li>
+                    <li>턴 숫자를 1 늘리기.</li>
+                </ol>
+                <p><b>8. 만약 오답인데 플레이어 턴이 남아있지 않다면...</b></p>
+                <ol style="list-style: lower-alpha;">
+                    <li>플레이어에게 게임이 끝났음을 알려주기.</li>
+                    <li>이후에 플레이어가 다른 숫자를 제출하면 게임이 망가질 수 있으므로 제출을 막기.</li>
+                    <li>게임을 다시 시작할 수 있는 컨트롤 보여주기</li>
+                </ol>
+            </div>
+            
+            <div>
+                <p>정답 : <span id="result"></span></p>
+                <p>입력한 값 : <span id="guesses"></span></p>
+                <p id="lastResult"></p>
+                <p id="lowOrHi"></p>
+            </div>
+
+        </div>
+    </div>
+</body>
+</html>
