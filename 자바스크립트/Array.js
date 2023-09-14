@@ -50,7 +50,6 @@ console.log("================== splice() ===================");
 // var temp = slice.slice(1,3);
 // console.log(temp);
 
-
 // // concat 은 기존 배열의 요소를 사용해 새로운 배열을 만들거나 기존 배열에 요소를 추가하고자 할 때 사용됨
 // console.log("================== concat() ===================");
 // let arr = [1,2,3];
@@ -93,5 +92,3 @@ console.log("================== splice() ===================");
 // // map : 배열 요소 전체를 대상으로 함수를 호출하고, 함수 호출 결과를 배열로 반환해준다.
 // let arr_map = ["Bilbo","Gandalf","Nazgul"].map(item=>item.length);
 // console.log(arr_map);
-
-
