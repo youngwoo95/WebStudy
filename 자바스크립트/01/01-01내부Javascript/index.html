@@ -9,9 +9,9 @@
         // HTML 본문 전체를 불러와 읽었다는 것을 나타냄.
         document.addEventListener("DOMContentLoaded", () => {
         function createParagraph() {
-            const para = document.createElement("p");
-            para.textContent = "You clicked the button!";
-            document.body.appendChild(para);
+            const para = document.createElement("p"); // <p>태그를 생성하고 그 위치를 선택함 : para
+            para.textContent = "You clicked the button!"; // 안에 내용을 채우고
+            document.body.appendChild(para); // 선택한 내용 안에 자식요소를 추가한다.
         }
 
         const buttons = document.querySelectorAll("button");
@@ -19,7 +19,8 @@
         for (const button of buttons) {
             button.addEventListener("click", createParagraph);
         }
-        });
+      });
+
     </script>
   </head>
   <body>
@@ -32,7 +33,7 @@
   자바스크립트로 요소 추가하기
   createElement(), appendChild()
 
-  createelement() : 요소를 만드는 메서드
+  createElement() : 요소를 만드는 메서드
 
   ex)
   const hello = document.createElement("h1"); // <h1></h1> 코드가 생성된다.

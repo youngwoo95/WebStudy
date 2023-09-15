@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        /*
+            setItem() : key, value 추가
+            getItem() : value 읽어 오기
+            removeItem() : item 삭제
+            clear() : 도메인 내의 localStorage 값 삭제
+            length : 전체 item 갯수
+            key() : index로 key값 찾기
+        */
+
+        // localStorage에 아이템 추가, 읽기
+        // setItem() : localStorage에 아이템을 추가하기 위해서는 setItem() 함수를 사용합니다.
+        // window.localStorage.setItem(key, value)
+        
+        // getItem() : localStorage에 아이템을 읽기 위해서는 getItem() 함수를 사용합니다.
+        // window.localStorage.getItem(key)
+
+        // setItem
+        // window.localStorage.setItem('name','anna');
+        // window.localStorage.setItem('age','20');
+
+        // // getItem
+        // var name = window.localStorage.getItem('name');
+        // var age = window.localStorage.getItem('age');
+        
+
+    </script>
+</head>
+<body>
+    <script>
+        window.localStorage.setItem('name','anna');
+        window.localStorage.setItem('age','20');
+
+        var name = window.localStorage.getItem('name');
+        var age = window.localStorage.getItem('age');
+        var jbBtn = document.createElement('p');
+        var jbBtnText = document.createTextNode(`${name},${age}`);
+        jbBtn.appendChild( jbBtnText );
+        document.body.appendChild( jbBtn );
+    </script>
+</body>
+</html>
