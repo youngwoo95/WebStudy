@@ -13,7 +13,7 @@ h1 {
   font-size: 3rem;
 }
 
-#start-btn {
+.start-btn {
   margin: 10px;
   background-color: wheat;
   transition: all 0.3s ease-in-out;
@@ -21,7 +21,7 @@ h1 {
   font-size: 1.3rem;
 }
 
-#start-btn:hover {
+.start-btn:hover {
   transition: all 0.3s ease-in-out;
   background-color: tomato;
 }
