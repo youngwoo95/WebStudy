@@ -1,0 +1,16 @@
+HTML DOM에서 노드 간의 관계는 다음과 같은 프로퍼티로 정의된다.
+
+1. parentNode : 부모노드
+2. childNodes : 자식 노드 리스트
+3. firstChild : 첫 번째 자식 노드
+4. lastChild : 마지막 자식 노드
+5. nextSibling : 다음 형제 노드
+6. previousSibling : 이전 형제 노드
+
+
+
+노드에 대한 정보
+노드에 대한 정보는 다음과 같은 프로퍼티를 통해 접근할 수 있습니다.
+1. nodeName
+2. nodeValue
+3. nodeType

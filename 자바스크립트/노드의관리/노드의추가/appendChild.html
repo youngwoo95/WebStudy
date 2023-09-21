@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>appendChild()</title>
+</head>
+<body>
+    <h1>appendChild() 메서드</h1>
+    <h2 id="item">JavaScript</h2>
+    <div id="list">
+        <p>HTML</p>
+        <p>CSS</p>
+        <p>JQuery</p>
+    </div>
+    <button onclick="appendNode()">노드 추가</button>
+
+    <script>
+        const appendNode = function(){
+            var parent = document.getElementById("list"); // 아이디가 "list"인 요소를 선택함
+            var newItem = document.getElementById("item"); // 아이디가 "item"인 요소를 선택함
+            parent.appendChild(newItem);
+        }
+    </script>
+
+
+</body>
+</html>
+
+<!--
+    appendChild() 메서드
+        : 새로운 노드를 해당 노드의 자식 노드 리스트(child node list)의 맨 마지막에 추가한다.
+-->

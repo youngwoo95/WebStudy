@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .alert{
+            padding: 15px;
+            border: 1px solid #d6e9c6;
+            border-radius: 4px;
+            color: #3c763d;
+            background-color: #dff0d8;
+        }
+    </style>
+</head>
+<body>
+    <!--
+    <div class="alert">
+        <strong>안녕하세요!</strong> 중요 메시지를 확인하셨습니다.
+    </div>
+    -->
+    <script>
+        // 메시지 생성하기
+
+        // 1. <div> 요소 만들기
+        let div = document.createElement('div');
+        // 2. 만든 요소의 클래스를 'alert'로 설정
+        div.className = "alert";
+        // 3. 내용 채워넣기
+        div.innerHTML = "<strong>안녕하세요</strong> 중요 메시지를 확인하셨습니다.";
+        // 삽입
+        document.body.append(div);
+
+    </script>
+</body>
+</html>

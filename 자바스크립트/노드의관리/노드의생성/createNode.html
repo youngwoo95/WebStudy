@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>createNode()</title>
+</head>
+<body>
+    <h1>텍스트 노드의 생성</h1>
+    <button onclick="createNode()">텍스트 노드 생성</button>
+    <p id="text"></p>
+
+    <script>
+        var createNode = function(){
+            var elementNode = document.getElementById("text");
+            var newText = document.createTextNode("새로운 텍스트에요");
+            elementNode.appendChild(newText);
+        }
+    </script>
+</body>
+</html>
+
+<!--
+    텍스트 노드의 생성 : createTextNode() 메소드를 사용하여 새로운 텍스트 노드를 만들 수 있습니다.
+
+-->

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>DOM 요소의 스타일 변경</h1>
+    <p id="text">이 문자의 기본색은 검정색입니다.</p>
+    <button onclick="changeRedColor()">빨간색 글자</button>
+    <button onclick="changeBlackColor()">검정색 글자</button>
+
+    <script>
+        var str = document.getElementById("text"); // 아이디가 text인 요소를 선택함
+        function changeRedColor(){
+            str.style.color = "red";
+        }
+        function changeBlackColor(){
+            str.style.color = "black";
+        }
+    </script>
+
+</body>
+</html>
+
+<!--
+    HTML DOM을 이용하면 HTML 요소의 스타일(style)도 손쉽게 변경할 수 있다.
+-->

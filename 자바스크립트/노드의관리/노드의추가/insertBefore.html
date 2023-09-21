@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>insertBefore()</title>
+</head>
+<body>
+    <h1>insertBefore() 메서드</h1>
+    <h2 id="item">JavaScript</h2>
+    <div id="list">
+        <p>HTML</p>
+        <p id="criteria">CSS</p>
+        <p>JQuery</p>
+    </div>
+    <button onclick="appendNode()">노드 추가</button>
+
+    <script>
+        const appendNode = function(){
+            var parent = document.getElementById("list"); // 아이디가 list인 요소를 선택함
+            var criteriaItem = document.getElementById("criteria"); // 아이디가 criteria인 요소를 선택함.
+            var newItem = document.getElementById("item");
+            
+            parent.insertBefore(newItem, criteriaItem);
+        }
+    </script>
+</body>
+</html>
+
+<!--
+    insertBefore() : 새로운 노드를 특정 자식 노드 바로 앞에 추가한다.
+    
+    부모노드.insertBefore(새로운자식노드, 기준자식노드)
+
+    새로운자식노드 : 자식 노드 리스트(child node list)에 새롭게 추가할 자식 노드를 전달한다.
+    기준 자식 노드 : 새로운 노드를 삽입할 때 기준이 되는 노드로, 이 노드 바로 앞에 새로운 노드가 추가된다.
+
+    기준자식노드에 null값을 전달하면 새로운 노드는 자식 노드 리스트의 맨 마지막 노드로 추가된다.
+    즉, appendChild() 메소드와 완전히 같은 동작을 하게 된다.
+-->
