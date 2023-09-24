@@ -1,0 +1,7 @@
+Object.keys, values, entries
+
+일반 객체에도 keys(), values(), entries() 를 사용할 수 있음
+Object.keys(obj) : 객체의 키만 담은 배열을 반환한다.
+Object.values(obj) : 객체의 값만 담은 배열을 반환한다.
+Object.entries(obj) : [키, 값] 쌍을 담은 배열을 반환한다.
+
