@@ -1,0 +1,110 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html, body{
+    font-family: "malgun gothic", "dotum";
+}
+
+
+/* container */
+.container{
+    width: 800px;
+    border: 10px solid black;
+    box-sizing: border-box;
+    margin: 0 auto;
+    opacity: 0.5;
+}
+
+/*uppermost*/
+.uppermost{
+    background-color: pink;
+    height:50px;
+    text-align: center;
+    line-height: 50px;
+}
+
+.container-upm{
+    background-color:#FDA;
+    border: 0px;
+}
+
+/* header */
+.header{
+    background-color: #90FFFF;
+    height:150px;
+    text-align: center;
+    line-height: 150px;
+}
+
+.container-h{
+    background-color: #FDA;
+    border: 0px;
+    width: 100%;
+}
+
+/* nav */
+.nav{
+    background-color: #00FFFF;
+    height:50px;
+    /* text-align: center; */
+    line-height: 50px;
+}
+
+.container-n{
+    /* background-color: #FDA; */
+    border: 0px;
+}
+
+
+/* content */
+.content-wrap{
+    background-color: pink;
+    
+}
+
+.container-sc{
+    opacity: 1;
+    overflow: auto;
+}
+
+.sidebar{
+    background-color:red;
+    width:30%;
+    height:300px;
+    line-height: 300px;
+    text-align: center;
+    float:left;
+}
+
+.content{
+    background-color: blue;
+    width: 70%;
+    height:300px;
+    text-align: center;
+    line-height: 300px;
+    float:right;
+}
+
+
+/* footer */
+.footer{
+    background-color:gray;
+    text-align: center;
+    height:150px;
+    line-height: 150px;
+}
+
+.container-f{
+    background-color: #FDA;
+    border: 0px;
+    opacity: 0.1;
+    width: 100%;
+}
+
+/* clearfix */
+.clear{
+    clear: both;
+}
