@@ -37,7 +37,7 @@ const createTodo = function (storageData) {
 };
 
 const keyCodeCheck = function () {
-  if (window.event.keyCode === 13 && todoInput.value !== "") {
+  if (window.event.keyCode === 13 && todoInput.value.trim() !== "") {
     createTodo();
   }
 };
@@ -76,12 +76,15 @@ if (saveTodoList) {
   }
 }
 
-const accessToGeo = function (position) {
+const accessToGeo = function ({ coords }) {
+  const { latitude, longitude } = coords;
+  console.log(latitude, longitude);
+
+  // shorthand property
   const positionObj = {
-    latitude: position.coords.latitude,
-    longitude: position.coords.longitude,
+    latitude,
+    longitude,
   };
-  console.log(positionObj);
 
   weatherSearch(positionObj);
 };
@@ -93,15 +96,54 @@ const askForLocation = function () {
 };
 askForLocation();
 
-const weatherSearch = function (position) {
+const weatherDataActive = function ({ location, weather }) {
+  const weatherMainList = [
+    "Clear",
+    "Clouds",
+    "Drizzle",
+    "Rain",
+    "Snow",
+    "Thunderstorm",
+  ];
+
+  weather = weatherMainList.includes(weather) ? weather : "Fog";
+
+  const locationNameTag = document.querySelector("#location-name-tag");
+  locationNameTag.textContent = location;
+
+  if (
+    !savedWeatherData ||
+    savedWeatherData.location !== location ||
+    savedWeatherData.weather !== weather
+  ) {
+    localStorage.setItem(
+      "saved-weather",
+      JSON.stringify({ location, weather })
+    );
+  }
+
+  // if (weatherMainList.includes(weather)) {
+  //   document.body.style.backgroundImage = `url('./images/${weather}.jpg')`;
+  // }
+  //  else {
+  //   document.body.style.backgroundImage = `url('./images/Fog.jpg')`;
+  // }
+};
+
+const weatherSearch = function ({ latitude, longitude }) {
   fetch(
-    `https://api.openweathermap.org/data/2.5/weather?lat=${position.latitude}&lon=${position.longitude}&appid=d20c89b987c68c75aed8dd66fee8c34a`
+    `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=d20c89b987c68c75aed8dd66fee8c34a`
   )
     .then((res) => {
       return res.json();
     })
     .then((json) => {
-      console.log(json.name, json.weather[0].description);
+      const weatherData = {
+        location: json.name,
+        weather: json.weather[0].main,
+        // weather: "Fog133",
+      };
+      weatherDataActive(weatherData);
     })
     .catch((error) => {
       console.log(error);
