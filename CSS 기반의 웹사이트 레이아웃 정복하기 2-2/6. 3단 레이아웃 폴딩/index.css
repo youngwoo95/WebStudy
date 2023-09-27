@@ -1,0 +1,109 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html, body{
+    font-family: "malgun gothic","dotum";
+    text-transform: capitalize;
+}
+
+/* container */
+.container{
+    width: 800px;
+    border: 5px solid black;
+    box-sizing: border-box;
+    margin: 0 auto;
+    opacity: 0.5;
+}
+
+/* uppermost menu */
+.uppermost{
+
+}
+
+/* header */
+header{
+    background-color: #90FFFF;
+    text-align: center;
+    height: 150px;
+    line-height: 150px;
+}
+
+.container-h{
+    background-color: #FDA;
+    border: 0;
+}
+
+/* nav */
+nav{
+    background-color: #10FFFF;
+    text-align: center;
+    height: 50px;
+    line-height: 50px;
+}
+
+.container-n{
+    background-color: #FDA;
+    border: 0;
+}
+
+/* content */
+.content-wrap{
+    background-color: pink;
+}
+
+.container-sc{
+    opacity: 1;
+    overflow: auto;
+    box-sizing: content-box;
+}
+
+aside{
+    background-color: red;
+    width: 150px;
+    text-align: center;
+    height: 300px;
+    line-height: 300px;
+    float: left;
+}
+
+article{
+    background-color: blue;
+    width: 500px;
+    text-align: center;
+    height: 300px;
+    line-height: 300px;
+    float: left;
+}
+
+aside#right-banner{
+    background-color: red;
+    width: 150px;
+    text-align: center;
+    height: 300px;
+    line-height: 300px;
+    float: right;
+}
+
+
+
+/* footer */
+footer{
+    background-color: #666;
+    text-align: center;
+    height: 150px;
+    line-height: 150px;
+}
+
+.container-f{  
+    background-color: #FDA;
+    border: 0px;
+    opacity: 0.1;
+}
+
+/* clearfix */
+.clear{
+    clear: both;
+}

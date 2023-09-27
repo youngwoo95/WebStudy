@@ -1,0 +1,104 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html, body{
+    font-family: "malgun gothic","dotum";
+    text-transform: capitalize;
+}
+
+/* container */
+.container{
+    width: 800px;
+    border: 5px solid black;
+    box-sizing: border-box;
+    margin: 0 auto;
+    opacity: 0.5;
+}
+
+/* uppermost menu */
+.uppermost{}
+
+section{
+    
+}
+
+.container-upm{}
+
+/* header */
+header{
+    background-color: #90FFFF;
+    text-align: center;
+    height: 150px;
+    line-height: 150px;
+}
+
+.container-h{
+    background-color: #FDA;
+    border: 0px;
+}
+
+/* nav */
+nav{
+    background-color: #10FFFF;
+    text-align: center;
+    height: 50px;
+    line-height: 50px;
+}
+
+.container-n{
+    background-color: #FDA;
+    border: 0px;
+}
+
+/* content */
+.content-wrap{
+    background-color: pink;
+}
+
+.container-sc{
+    opacity: 1;
+    overflow: auto;
+}
+
+aside{
+    background-color: red;
+    width:30%;
+    height: 300px;
+    /* text-align: center; */
+    /* line-height: 300px; */
+    float:left;
+    font-size: 0.75em;
+    padding: 20px 0 0 30px;
+    line-height: 1.8em;
+    
+}
+
+article{
+    background-color: blue;
+    width: 70%;
+    height: 300px;
+    /* line-height: 300px; */
+    text-align: center;
+    float:right;
+}
+
+/* footer */
+footer{
+    background-color: gray;
+    text-align: center;
+    height: 150px;
+    line-height: 150px;
+}
+
+.container-f{
+    background-color: #666;
+    border: 0px;
+}
+
+/* clearfix */
+.clear{
+    clear: both;
+}
